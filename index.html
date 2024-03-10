@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KiwiX ExE</title>
+    <link rel="stylesheet" href="./ViralMass _ Descargas_files/styles-scripts.css">
+    <link rel="stylesheet" href="./ViralMass _ Descargas_files/styles.css">
+    <link href="./ViralMass _ Descargas_files/remixicon.css" rel="stylesheet">
+  </head>
+  <body cz-shortcut-listen="true">
+    <div id="particles-js"><canvas class="particles-js-canvas-el" style="width: 100%; height: 100%;" width="1747" height="842"></canvas></div>
+    <div class="banner">
+      <div class="navbar show">
+        <div class="logo-container">
+          <img class="logo" src="./ViralMass _ Descargas_files/1010-200.png">
+          <div class="text-box-logo">
+            <span class="logo-text">KiwiX Externals</span>
+            <span class="test">TikTok: Ryukzzc</span>
+          </div>
+        </div>
+        <ul>
+          <li><a href="https://discord.gg/zqwRQKchRJ">DISCORD</a></li>
+          <li><a href="https://www.tiktok.com/@ryukzzc">TikTok</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="status-container">
+      <div class="status-header">
+          <div class="status-header-title">Undetected Externals</div>
+          <div class="status-header-description">Downloads Free Externals</div>
+      </div>
+  </div>
+  <div class="section-title">
+      <span></span>
+    </div>
+    <div class="status-val">
+        <div class="status-box">
+            <div class="status-box-description">
+                <span class="title">Car Parking</span>
+                <h1 class="product">AbyssCPM External</h1>
+                <p class="status"><i class="ri-indeterminate-circle-line"></i>Car Parking Pc</p>
+                <p class="last-update">Upadate in <span class="date">09/04/2024</span></p>
+                <div class="overlay" id="overlay">
+                  <a href="https://discord.gg/zqwRQKchRJ"><button class="overlay-button">Get Key</button></a>
+                  <a href="https://discord.gg/zqwRQKchRJ"><button class="overlay-button">Download</button></a>
+                </div>
+            </div>
+        </div>
+      <div class="status-box">
+        <div class="status-box-description">
+            <span class="title">Free Fire</span>
+            <h1 class="product">KiwiX Free External Cheat</h1>
+            <p class="status"><i class="ri-checkbox-circle-line"></i>Free Fire Pc</p>
+            <p class="last-update">last update <span class="date">09/03/2024</span></p>
+            <div class="overlay" id="overlay">
+              <a href="https://discord.gg/zqwRQKchRJ"><button class="overlay-button">Get Key</button></a>
+              <a href="https://discord.gg/zqwRQKchRJ"><button class="overlay-button">Download</button></a>
+            </div>
+        </div>
+    </div>
+   
+
+    <!--                      SCRIPTS         -->
+    <script>
+      var loader = document.getElementById("preloader");
+      window.addEventListener("load", function () {
+        loader.style.display = "none";
+      });
+      let valueDisplays = document.querySelectorAll(".num");
+      let interval = 4000;
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          console.log(entry);
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+          }
+        });
+      });
+      valueDisplays.forEach((valueDisplay) => {
+        let startValue = 0;
+        let endValue = parseInt(valueDisplay.getAttribute("data-val"));
+        let duration = Math.floor(interval / endValue);
+        let counter = setInterval(function () {
+          startValue += 5;
+          valueDisplay.textContent = startValue;
+          if (startValue == endValue) {
+            clearInterval(counter);
+          }
+        }, duration);
+      });
+      const hiddenElements6 = document.querySelectorAll(".navbar");
+      hiddenElements6.forEach((el) => observer.observe(el));
+      var textWrapper = document.querySelector(".content1-header-text12");
+      textWrapper.innerHTML = textWrapper.textContent.replace(
+        /\S/g,
+        "<span class='letter'>$&</span>"
+      );
+      anime
+        .timeline({
+          loop: false,
+        })
+        .add({
+          targets: ".content1-header-text12 .letter",
+          translateX: [40, 0],
+          translateZ: 0,
+          opacity: [0, 1],
+          easing: "easeOutExpo",
+          duration: 1600,
+          delay: (el, i) => 500 + 30 * i,
+        });
+      var textWrapper = document.querySelector(".content1-text1");
+      textWrapper.innerHTML = textWrapper.textContent.replace(
+        /\S/g,
+        "<span class='letter'>$&</span>"
+      );
+      anime
+        .timeline({
+          loop: false,
+        })
+        .add({
+          targets: ".content1-text1 .letter",
+          translateX: [40, 0],
+          translateZ: 0,
+          opacity: [0, 1],
+          easing: "easeOutExpo",
+          duration: 1600,
+          delay: (el, i) => 500 + 30 * i,
+        });
+      document
+        .getElementById("scroll-button")
+        .addEventListener("click", function () {
+          document.getElementById("scroll-target").scrollIntoView({
+            behavior: "smooth",
+          });
+        });
+    </script>
+    <script src="./ViralMass _ Descargas_files/particles.min.js.descarga"></script>
+    <script>
+      document.querySelectorAll('.status-box').forEach(box => {
+        box.addEventListener('mouseenter', () => {
+          box.classList.add('blur');
+        });
+  
+        box.addEventListener('mouseleave', () => {
+          box.classList.remove('blur');
+        });
+      });
+    </script>
+    <script>
+      particlesJS({
+        particles: {
+          number: {
+            value: 80,
+            density: {
+              enable: true,
+              value_area: 800,
+            },
+          },
+          color: {
+            value: "#6e0e96",
+          },
+          shape: {
+            type: "circle",
+            stroke: {
+              width: 0,
+              color: "#000000",
+            },
+            polygon: {
+              nb_sides: 5,
+            },
+            image: {
+              src: "img/github.svg",
+              width: 100,
+              height: 100,
+            },
+          },
+          opacity: {
+            value: 0.5,
+            random: false,
+            anim: {
+              enable: false,
+              speed: 1,
+              opacity_min: 0.1,
+              sync: false,
+            },
+          },
+          size: {
+            value: 3,
+            random: true,
+            anim: {
+              enable: false,
+              speed: 40,
+              size_min: 0.1,
+              sync: false,
+            },
+          },
+          line_linked: {
+            enable: true,
+            distance: 150,
+            color: "#ffffff",
+            opacity: 0.4,
+            width: 1,
+          },
+          move: {
+            enable: true,
+            speed: 6,
+            direction: "none",
+            random: false,
+            straight: false,
+            out_mode: "out",
+            bounce: false,
+            attract: {
+              enable: false,
+              rotateX: 600,
+              rotateY: 1200,
+            },
+          },
+        },
+        interactivity: {
+          detect_on: "canvas",
+          events: {
+            onhover: {
+              enable: true,
+              mode: "repulse",
+            },
+            onclick: {
+              enable: true,
+              mode: "push",
+            },
+            resize: true,
+          },
+          modes: {
+            grab: {
+              distance: 400,
+              line_linked: {
+                opacity: 1,
+              },
+            },
+            bubble: {
+              distance: 400,
+              size: 40,
+              duration: 2,
+              opacity: 8,
+              speed: 3,
+            },
+            repulse: {
+              distance: 200,
+              duration: 0.4,
+            },
+            push: {
+              particles_nb: 4,
+            },
+            remove: {
+              particles_nb: 2,
+            },
+          },
+        },
+        retina_detect: true,
+      });
+    </script>
+  
+
+</div></body></html>
