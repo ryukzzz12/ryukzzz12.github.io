@@ -1,0 +1,386 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: montserrat, sans-serif;
+    text-decoration: none;
+    list-style: none;
+    --text-color: #fff;
+    /* Texto principal en blanco */
+    --main-color: #16171a;
+    /* Fondo principal en gris oscuro */
+    --contrast-color: #00ffff;
+    /* Color de contraste en morado */
+    --second-color: #131415;
+    /* Segundo color en gris oscuro más profundo */
+    --accent-color: #7289da;
+    /* Acento en azul Discord (opcional) */
+    --highlight-color: #e619d8;
+    /* Color de resaltado (opcional) */
+
+}
+body {
+    color: var(--text-color);
+    background-color: var(--main-color)
+}
+#mobileWarning {
+    text-align: center;
+    background-color: #ffcccc;
+    padding: 10px;
+  }
+#particles-js {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Para que esté detrás del contenido */
+}
+.navbar {
+    width: 85%;
+    margin-top: 40px;
+    margin-left: 140px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateY(-100%);
+    transition: all 1s
+}
+.logo-container {
+    display: flex;
+    align-items: center; /* Alinea verticalmente la imagen y el texto */
+}
+
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-left: 20px; /* Ajusta este valor según tus necesidades */
+    }
+
+    .text-box-logo {
+        order: 1;
+        margin-top: 20px; /* Ajusta este valor según tus necesidades */
+        right: 0;
+    }
+
+    .navbar ul {
+        margin-top: 20px; /* Ajusta este valor según tus necesidades */
+        text-align: center;
+    }
+
+    .navbar ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .navbar ul li::after {
+        content: none;
+    }
+}
+.navbar.show{
+    opacity: 1;
+    filter: blur(0px);
+    transform: translateY(0%);
+}
+.logo {
+    width: 100px;
+    cursor: pointer;
+}
+.text-box-logo {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px; /* Ajusta este valor según tus necesidades */
+}
+.logo-text {
+    display: flex;
+    color: var(--text-color);
+    font-weight: 800;
+    font-size: 1.2rem
+}
+
+.logo-text-second {
+    margin-top: 3px;
+    font-weight: 300;
+    font-size: .85rem
+}
+
+.navbar ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+.text-logo-header{
+    display: flex;
+    position: relative;
+    right: 360px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.navbar ul li::after {
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #00ffff;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+.navbar ul li:hover::after{
+    width: 100%;
+}
+.Header-Title{
+    font-size: 40px;
+    text-align: center;
+
+}
+.column {
+    flex: 1
+}
+.content1-header-text12 {
+    margin-top: 90px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 48px;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    margin-bottom: 40px;
+    
+  }
+
+
+
+  .content1-header-text12 span:before,
+  .content1-header-text12 span:after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    top: 0;
+    z-index: -1;
+  }
+
+  .content1-header-text12 span:before {
+    background-color: #0074cc; /* Azul */
+    left: 0;
+  }
+
+  .content1-header-text12 span:after {
+    background-color: #e619d8; /* Morado */
+    left: 50%;
+  }
+
+
+.content1-header-text12 .letter {
+    display: inline-block;
+    line-height: .5em
+}
+.content1-text1 {
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 300;
+    letter-spacing: .06em
+
+}
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 40px;
+}
+
+.Btn-hero {
+    background-color: #00ffff75;
+    border: solid 1px #00ffff75;
+    color: #fff;
+    font-size: 18px;
+    padding-left: 100px;
+    padding-block: 10px;
+    padding-inline: 40px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 5%;
+    transition: .3s;
+    margin-right: 10px
+}
+
+
+.Btn-hero:hover {
+    transform: translateY(5px);
+    box-shadow: 0 5px 10px #0e0f11
+}
+
+.btn-text {
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.ri-discord-fill {
+    width: 20px;
+    display: flex;
+    font-size: 35px;
+    margin-left: 8px;
+    transition: all .3s
+}
+
+.ri-shopping-cart-2-fill {
+    width: 20px;
+    display: flex;
+    font-size: 35px;
+    margin-left: 8px;
+    transition: all .3s
+}
+.section-5 {
+    position: relative;
+    top: 400px;
+    background-color: var(--second-color);
+    padding-top: 100px;
+    padding-bottom: 70px
+}
+.category-header-title {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: var(--highlight-color);
+    font-weight: 500
+}
+
+.caterogy-title {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 45px;
+    font-weight: 650;
+    margin-bottom: 30px;
+    margin-top: 50px
+}
+
+.caterogy-text {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--contrast-color)
+}
+.category-section-1 {
+    margin-bottom: 200px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap
+}
+.section-4 {
+    position: relative;
+    top: 600px;
+    display: block;
+    margin-top: 220px;
+    padding-bottom: 400px;
+}
+
+
+.section-4-header {
+    position: relative;
+    bottom: 200px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    color: var(--contrast-color);
+    font-size: 30px;
+
+}
+
+.section-4-body {
+    position: relative;
+    bottom: 160px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 48px;
+    font-weight: 500
+}
+
+.section-4-description {
+    position: relative;
+    bottom: 160px;
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--highlight-color);
+    text-align: center
+}
+
+.socials {
+    display: flex;
+    justify-content: center
+}
+@media (max-width: 657){
+    .icon-section{
+        flex-direction: column;
+    }
+}
+
+.tiktok-icon {
+    max-width: 90px;
+    cursor: pointer;
+    transition: .3s
+}
+
+.tiktok-icon:hover {
+    transform: scale(1.1)
+}
+
+.discord-icon {
+    padding-left: 40px;
+    max-width: 90px;
+    cursor: pointer;
+    transition: .3s;
+    margin-inline: 3rem
+}
+
+.youtube-icon {
+    max-width: 118px;
+    cursor: pointer;
+    transition: .3s;
+    padding-left: 30px;
+}
+
+.youtube-icon:hover {
+    transform: scale(1.1);
+}
+
+.discord-icon:hover {
+    transform: scale(1.1)
+}
+.krispi {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    position: relative;
+    bottom: 160px;
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--contrast-color);
+    text-align: center
+    
+}
+
+.bannerkrispi img {
+    width: 40px; /* Establece el ancho de la imagen al 100% del contenedor */
+    height: auto; /* Mantiene la proporción original de la imagen */
+    max-width: 100%; /* La imagen no debe exceder el ancho del contenedor */
+    display: block; /* Evita que la imagen tenga márgenes no deseados */
+    margin: auto; /* Centra la imagen dentro del contenedor */
+}

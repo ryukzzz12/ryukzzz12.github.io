@@ -1,0 +1,268 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: montserrat, sans-serif;
+    text-decoration: none;
+    list-style: none;
+    --text-color: #fff;
+    /* Texto principal en blanco */
+    --main-color: #16171a;
+    /* Fondo principal en gris oscuro */
+    --contrast-color: #00ffff;
+    /* Color de contraste en morado */
+    --second-color: #131415;
+    /* Segundo color en gris oscuro más profundo */
+    --accent-color: #7289da;
+    /* Acento en azul Discord (opcional) */
+    --highlight-color: #e619d8;
+    /* Color de resaltado (opcional) */
+}
+
+body {
+    color: var(--text-color);
+    background-color: var(--main-color)
+}
+
+.status-container {
+    margin-top: 30px
+}
+
+.status-header {
+    display: block;
+    transition: all 1s;
+    margin-bottom: 50px
+}
+
+.status-header-title {
+    display: flex;
+    justify-content: center;
+    font-size: 48px;
+    font-weight: 500;
+    margin-bottom: 10px
+}
+
+.status-header-description {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--contrast-color)
+}
+
+.status-val,
+.status-apex,
+.status-spoofer {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px
+}
+
+.section-title {
+    padding-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    font-size: 32px;
+    font-weight: 500
+
+}
+
+.line {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    margin-bottom: 30px
+}
+
+.big-line {
+    background-color: #ffffff6e;
+    width: 25px;
+    height: 5px;
+    border-radius: 20px
+}
+:root {
+    --module-color: #e619d8;
+}
+
+.status-box {
+    position: relative;
+    overflow: hidden;
+      transition: filter 0.5s ease-in-out;
+    display: inline-block;
+    width: 300px;
+    background-color: #28292d;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px #0e0f11;
+    padding: 20px;
+    margin-inline: 15px;
+    overflow: hidden; /* Añadimos overflow: hidden para ocultar el contenido que se salga del div */
+    z-index: 2; /* Asegúrate de que los .status-box estén por encima de los cuadros animados */
+}
+
+.status-box::before,
+.status-box::after {
+    content: '';
+    position: absolute;
+    width: 100%; /* Ancho del borde igual al 100% del elemento padre */
+    height: 100%; /* Alto del borde igual al 100% del elemento padre */
+    border: 2px solid var(--module-color); /* Borde púrpura */
+    animation: animate 6s linear infinite;
+    z-index: 0; /* Asegúrate de que los .box estén por detrás de los .status-box */
+}
+
+.status-box::before {
+    top: 0; /* Borde superior */
+    left: 0; 
+    transform-origin: top left;
+}
+
+.status-box::after {
+    bottom: 0; /* Borde inferior */
+    right: 0; /* Borde derecho */
+    transform-origin: bottom right;
+}
+@keyframes animate
+{
+    0%
+    {
+        transform: rotate(0deg)
+    }
+    100%
+    {
+        transform: rotate(360deg)
+    }
+}
+.status-box-description {
+    text-align: center
+}
+
+.title {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--contrast-color)
+}
+
+.product {
+    margin-top: 10px;
+    margin-bottom: 15px
+}
+
+.status {
+    font-size: 18px;
+    margin-bottom: 8px
+}
+
+.last-update {
+    color: var(--third-color)
+}
+
+.date {
+    color: var(--contrast-color)
+}
+
+.ri-checkbox-circle-line {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 8px;
+    font-size: 32px;
+    color: #1fb900
+}
+
+.ri-indeterminate-circle-line {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 8px;
+    font-size: 32px;
+    color: #c0ad00
+}
+
+.ri-close-circle-line {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 8px;
+    font-size: 32px;
+    color: #b60000
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0px);
+    transform: translateY(0px)
+}
+
+@media(max-width: 800px) {
+
+    .shop,
+    .status-link {
+        display: none
+    }
+
+    .home {
+        margin-top: 25px;
+        margin-right: 30px
+    }
+
+    .logo {
+        margin-left: 41%
+    }
+
+    .logo-text,
+    .logo-text-second {
+        display: none
+    }
+
+    .nav-links {
+        margin: 0
+    }
+}
+.status-box {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5); /* Puedes ajustar el valor del color y la opacidad */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    backdrop-filter: blur(5px); /* Efecto de desenfoque solo en el fondo */
+  }
+
+  .status-box:hover .overlay {
+    opacity: 1;
+  }
+
+  .overlay-button {
+    background-color: #00ffff75;
+    border: solid 1px #00ffff75;
+    color: #fff;
+    font-size: 18px;
+    padding-left: 20px; /* Ajusta el valor según tus necesidades */
+    padding-right: 20px; /* Ajusta el valor según tus necesidades */
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: 0.3s;
+  }
+
+  .overlay-button:hover {
+    transform: translateY(5px);
+    box-shadow: 0 5px 10px #0e0f11;
+  }
+
+  .btn-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
